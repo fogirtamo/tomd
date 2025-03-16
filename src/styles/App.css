@@ -1,0 +1,122 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#root {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: black;
+}
+
+.App {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    min-height: 100vh;
+    width: 1000px;
+    background-color: rgba(17, 17, 17, 1.00);
+}
+
+.App-header {
+    width: 900px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+.App-logo {
+    height: 220px;
+    width: 220px;
+}
+
+.Auth-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.Auth-container>span {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    text-align: center;
+    font-family: Verdana, Geneva, sans-serif;
+    color: rgba(169, 169, 169, 1.00);
+    font-size: 15px;
+    margin-bottom: 10px;
+}
+
+.App-auth {
+    width: 400px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 100px;
+}
+
+.App-body {
+    width: 970px;
+    height: 800px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+.App-search__panel {
+    width: 455px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.App-footer {
+    height: 40px;
+    width: 970px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(24, 24, 24, 1.00);
+    margin: 5px 0px;
+    padding: 0 10px;
+    font-family: Verdana, Geneva, sans-serif;
+    font-size: 14px;
+    color: rgba(218, 218, 218, 1.00);
+}
+
+
+
+
+a:active,
+a:hover,
+a {
+    text-decoration: none;
+    color: rgba(218, 218, 218, 1.00);
+}
+
+a:hover {
+    text-shadow: 1px 1px 1px rgba(230, 230, 230, 0.8)
+}
+
+a>img {
+    padding: 0;
+}
+
+.informationBlock {
+    width: 850px;
+    min-height: 350px;
+    display: flex;
+    flex-direction: column;
+    font-family: Verdana, Geneva, sans-serif;
+    color: rgba(169, 169, 169, 1.00);
+    margin-top: 50px;
+    border: 2px solid rgba(41, 41, 41, 1.00);
+    border-radius: 15px;
+    padding: 25px;
+}

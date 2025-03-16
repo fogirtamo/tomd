@@ -1,0 +1,27 @@
+.myInput {
+    height: 35px;
+    border: 2px solid rgba(35, 35, 35, 1.00);
+    background: rgba(12, 12, 12, 1.00);
+    color: rgba(136, 136, 136, 1.00);
+    padding-left: 10px;
+    font-family: Verdana, Geneva, sans-serif;
+    font-size: 14px;
+    letter-spacing: 0.3px;
+}
+
+.myInput:hover {
+    border: 2px solid rgba(41, 41, 41, 1.00);
+}
+
+.myInput:focus {
+    outline: none;
+    border: 2px solid rgba(41, 41, 41, 1.00);
+}
+
+.myInput::placeholder {
+    color: rgba(136, 136, 136, 1.00);
+}
+
+.myInput:focus::placeholder {
+    color: transparent;
+}

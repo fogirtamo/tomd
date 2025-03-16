@@ -1,0 +1,16 @@
+.filters {
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    align-items: center;
+    margin-top: 10px;
+    width: 945px;
+    color: white;
+}
+
+.filterSpan {
+    font-family: Verdana, Geneva, sans-serif;
+    font-size: 17px;
+    letter-spacing: 0.3px;
+    color: rgba(136, 136, 136, 1.00);
+}
