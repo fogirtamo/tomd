@@ -1,51 +1,51 @@
 .myCommentContainer {
-    display: flex;
-    flex-direction: row;
+  display: flex;
+  flex-direction: row;
 }
 
 .myComment {
-    width: 810px;
-    height: 100px;
-    border: 2px solid rgba(35, 35, 35, 1.00);
-    background: rgba(12, 12, 12, 1.00);
-    color: rgba(136, 136, 136, 1.00);
-    padding: 5px 5px;
-    font-family: Verdana, Geneva, sans-serif;
-    font-size: 14px;
-    letter-spacing: 0.3px;
-    resize: none;
+  width: 810px;
+  height: 100px;
+  border: 2px solid rgba(35, 35, 35, 1.00);
+  background: rgba(12, 12, 12, 1.00);
+  color: rgba(136, 136, 136, 1.00);
+  padding: 5px 5px;
+  font-family: Verdana, Geneva, sans-serif;
+  font-size: 14px;
+  letter-spacing: 0.3px;
+  resize: none;
 }
 
 .myComment:hover {
-    border: 2px solid rgba(41, 41, 41, 1.00);
+  border: 2px solid rgba(41, 41, 41, 1.00);
 }
 
 .myComment:focus {
-    outline: none;
-    border: 2px solid rgba(41, 41, 41, 1.00);
+  outline: none;
+  border: 2px solid rgba(41, 41, 41, 1.00);
 }
 
 .myComment::placeholder {
-    color: rgba(136, 136, 136, 1.00);
+  color: rgba(136, 136, 136, 1.00);
 }
 
 .myComment:focus::placeholder {
-    color: transparent;
+  color: transparent;
 }
 
 .myComment::-webkit-scrollbar {
-    background-color: rgba(35, 35, 35, 1.00);
-    border: 0.5px solid rgba(136, 136, 136, 1.00);
-    border-radius: 100px;
-    width: 9px;
+  background-color: rgba(35, 35, 35, 1.00);
+  border: 0.5px solid rgba(136, 136, 136, 1.00);
+  border-radius: 100px;
+  width: 9px;
 
 }
 
 .myComment::-webkit-scrollbar-thumb {
-    background-color: white;
-    border-radius: 100px;
+  background-color: white;
+  border-radius: 100px;
 }
 
 .myComment::-webkit-scrollbar-thumb:hover {
-    cursor: pointer;
+  cursor: pointer;
 }
