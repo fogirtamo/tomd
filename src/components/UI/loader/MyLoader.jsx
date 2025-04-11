@@ -1,13 +1,14 @@
-import React from 'react'
-import classes from './MyLoader.module.css'
+import React from 'react';
+import classes from './MyLoader.module.css';
 
 const MyLoader = ({ ...prop }) => {
   return (
-    <div className={classes.loader}
+    <div
+      className={classes.loader}
+      role="presentation" // Добавлено для тестов
       {...prop}
-    >
-    </div>
-  )
-}
+    ></div>
+  );
+};
 
-export default MyLoader
+export default MyLoader;
