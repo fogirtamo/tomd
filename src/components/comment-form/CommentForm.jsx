@@ -14,7 +14,7 @@ const CommentForm = () => {
   const movieData = useSelector(selectMovie);
 
   function handleOnMauseDown() {
-    if (comment.length > 0) {
+    if (comment.length > 0 && movieData) { // Проверка на наличие movieData
       addCommentToMovie(nickname, id, comment, movieData.imdbID, movieData.Title);
       setComment('');
       getCommentsByMovieId(movieData.imdbID, dispatch);
@@ -37,6 +37,7 @@ const CommentForm = () => {
         <MyButton
           style={{ width: 100, height: 30, marginLeft: 10 }}
           onMouseDown={handleOnMauseDown}
+          disabled={comment.length === 0} // Кнопка отключена, если комментарий пуст
         >
           Send
         </MyButton>
