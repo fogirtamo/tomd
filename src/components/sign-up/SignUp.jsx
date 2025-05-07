@@ -1,12 +1,12 @@
-import React, { useState } from 'react'
-import classes from './SignUp.module.css'
-import MyInput from '../UI/input/MyInput'
-import MyButton from '../UI/button/MyButton'
-import { Link } from 'react-router-dom'
-import { useDispatch, useSelector } from 'react-redux'
-import { selectRegError, selectRegState, setRegError } from 'features/userSlice'
-import SignUpErrors from './SignUpErrors'
-import registerWithEmailAndPassword from 'API/RegisterWithEmailAndPassword'
+import React, { useState } from 'react';
+import classes from './SignUp.module.css';
+import MyInput from '../UI/input/MyInput';
+import MyButton from '../UI/button/MyButton';
+import { Link } from 'react-router-dom';
+import { useDispatch, useSelector } from 'react-redux';
+import { selectRegError, selectRegState, setRegError } from 'features/userSlice';
+import SignUpErrors from './SignUpErrors';
+import registerWithEmailAndPassword from 'API/RegisterWithEmailAndPassword';
 
 const SignUp = () => {
   const dispatch = useDispatch();
@@ -20,22 +20,25 @@ const SignUp = () => {
   function handleOnMouseDown() {
     if (nickname.length < 3) {
       dispatch(setRegError('short-nickname'));
-    }
-    else if (password === repeatedPassword) {
+    } else if (password === repeatedPassword) {
       dispatch(setRegError(null));
       registerWithEmailAndPassword(email, password, nickname, dispatch);
-    }
-    else {
+    } else {
       dispatch(setRegError('unequal-password'));
     }
   }
 
   return (
-    regState ?
+    regState ? (
       <div className={classes.signUpContainer}>
         <div className={classes.backButton}>
           <Link to='/'>
-            <MyButton style={{ width: 90, height: 25, borderRadius: 5 }}>≪ Back</MyButton>
+            <MyButton
+              data-testid="back-button"
+              style={{ width: 90, height: 25, borderRadius: 5 }}
+            >
+              ≪ Back
+            </MyButton>
           </Link>
         </div>
         <div className={classes.signUpSuccess}>
@@ -44,47 +47,55 @@ const SignUp = () => {
           </span>
         </div>
       </div>
-      :
+    ) : (
       <div className={classes.signUpContainer}>
         <div className={classes.backButton}>
           <Link to='/'>
-            <MyButton style={{ width: 90, height: 25, borderRadius: 5 }}>≪ Back</MyButton>
+            <MyButton
+              data-testid="back-button"
+              style={{ width: 90, height: 25, borderRadius: 5 }}
+            >
+              ≪ Back
+            </MyButton>
           </Link>
         </div>
         <div className={classes.signUp}>
           <h2>Hello!</h2>
           <span>
-            To access the full functionality of the site you need to go through  a simple registration procedure. You will have the opportunity to rate and leave comments on films!
+            To access the full functionality of the site you need to go through a simple registration procedure. You will have the opportunity to rate and leave comments on films!
           </span>
-          <SignUpErrors
-            regError={regError}
-          />
+          <SignUpErrors regError={regError} />
           <div>E-Mail:
             <MyInput
               style={{ width: 300 }}
-              onChange={(e) => { setEmail(e.target.value) }}
+              placeholder="E-Mail"
+              onChange={(e) => { setEmail(e.target.value); }}
             />
           </div>
           <div>Login:
             <MyInput
               style={{ width: 300 }}
-              onChange={(e) => { setNickname(e.target.value) }}
+              placeholder="Login"
+              onChange={(e) => { setNickname(e.target.value); }}
             />
           </div>
           <div>Password:
             <MyInput
-              onChange={(e) => { setPassword(e.target.value) }}
               style={{ width: 300 }}
+              placeholder="Password"
+              onChange={(e) => { setPassword(e.target.value); }}
             />
           </div>
           <div>Repeat password:
             <MyInput
-              onChange={(e) => { setRepeatedPassword(e.target.value) }}
               style={{ width: 300 }}
+              placeholder="Repeat password"
+              onChange={(e) => { setRepeatedPassword(e.target.value); }}
             />
           </div>
           <div>
             <MyButton
+              data-testid="submit-button"
               onMouseDown={handleOnMouseDown}
               style={{ width: 200 }}
             >
@@ -93,6 +104,8 @@ const SignUp = () => {
           </div>
         </div>
       </div>
-  )
-}
-export default SignUp
+    )
+  );
+};
+
+export default SignUp;
